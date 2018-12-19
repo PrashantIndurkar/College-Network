@@ -20,17 +20,17 @@ class Landing extends Component {
                 <h1 className="display-3 mb-4">Students Connector</h1>
                 <p className="lead">
                   {" "}
-                  Create a developer profile/portfolio, share posts and get help
-                  from other developers
+                  Create a Student profile, Ask Questions and get help from
+                  other Students
                 </p>
                 <hr />
-                <Link to="/register" className="btn btn-lg btn-success mr-2">
+                <Link
+                  to="/register"
+                  className="btn btn-lg btn-outline-success mr-2"
+                >
                   Sign Up
                 </Link>
-                <Link
-                  to="/login"
-                  className="btn btn-lg btn-outline-danger mr-2"
-                >
+                <Link to="/login" className="btn btn-lg btn-danger mr-2">
                   Login
                 </Link>
               </div>

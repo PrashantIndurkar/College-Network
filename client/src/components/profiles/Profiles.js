@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Spinner from '../common/Spinner';
-import ProfileItem from './ProfileItem';
-import { getProfiles } from '../../actions/profileActions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import Spinner from "../common/Spinner";
+import ProfileItem from "./ProfileItem";
+import { getProfiles } from "../../actions/profileActions";
 
 class Profiles extends Component {
   componentDidMount() {
@@ -22,7 +22,7 @@ class Profiles extends Component {
           <ProfileItem key={profile._id} profile={profile} />
         ));
       } else {
-        profileItems = <h4>No profiles found...</h4>;
+        profileItems = <h4>No developers found...</h4>;
       }
     }
 
@@ -31,9 +31,9 @@ class Profiles extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
+              <h1 className="display-4 text-center">Students Profiles</h1>
               <p className="lead text-center">
-                Browse and connect with developers
+                Sign in and connect with Students.
               </p>
               {profileItems}
             </div>
@@ -53,4 +53,7 @@ const mapStateToProps = state => ({
   profile: state.profile
 });
 
-export default connect(mapStateToProps, { getProfiles })(Profiles);
+export default connect(
+  mapStateToProps,
+  { getProfiles }
+)(Profiles);
